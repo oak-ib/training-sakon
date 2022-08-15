@@ -1,4 +1,4 @@
-#Loopback
+# Loopback
 
 npm i -g @loopback/cli
 lb4 app
@@ -70,7 +70,6 @@ Add getPatient
   }
  ```
  
-
  ### Lb4 controller
 lb4 controller
 Controller class name: Hms
@@ -119,9 +118,7 @@ Select model
 ### Controller
 Lb4 controller
 CRUD 
-
-
-
+ 
 
 ### ENV
 Create file .env in root path
