@@ -1,7 +1,10 @@
+#Loopback
+
 npm i -g @loopback/cli
 lb4 app
 
----------DataSource ms sql--------
+### DataSource ms sql
+
 lb4 datasource 
 Name : hms
 Connector : Microsoft SQL
@@ -12,7 +15,7 @@ user: user ที่ใช้เข้า database
 password: pass ที่ใช้เข้า database
 database: HMSDB
 
-----------HIS Service connecttor----------
+### HIS Service connecttor
 lb4 service
 Service type: Local service class bound to application context
 Service name: HmsConnector
@@ -36,7 +39,7 @@ private hmsDataSource: HmsDataSource,
     });
   }
 
----------HIS Service--------------
+### HIS Service
 Service type: Local service class bound to application context
 Service name: HmsService
 
@@ -56,7 +59,8 @@ Add getPatient
 
     return this.hmsConnectorService.query<Array<object>>(sql);
   }
---------Lb4 controller -------
+
+ ### Lb4 controller
 lb4 controller
 Controller class name: Hms
 Empty Controller
@@ -75,7 +79,7 @@ Add function get
     return data;
   }
 
----------DataSource mongodb--------
+### DataSource mongodb
 lb4 datasource 
 Name : mongo
 Datasource name: mongo
