@@ -3,7 +3,7 @@ Install sql studio
 Connect hms
 
 https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16
-
+```
 SELECT
 AS
 CONCAT (CONVERT(varchar(10),LabNumber))
@@ -31,3 +31,4 @@ MAX, MIN
 
 UNION
 SUB QUERY
+```
