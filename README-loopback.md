@@ -21,13 +21,18 @@ Service type: Local service class bound to application context
 Service name: HmsConnector
 
 Edit file
+```
 import {HmsDataSource} from '../datasources';
 import inject @loopback/core
+```
 
  Add @inject to inject parameters in constructor
+ ```
 @inject('datasources.hms') (name:hms)
 private hmsDataSource: HmsDataSource,
+```
 
+```
   async query<T>(sql: string, params: Array<string> = []) {
     // console.log(sql);
     return new Promise<T>( (resolve, reject) => {
@@ -38,38 +43,46 @@ private hmsDataSource: HmsDataSource,
       });
     });
   }
+```
 
 ### HIS Service
+lb4 service
 Service type: Local service class bound to application context
 Service name: HmsService
-
+```
 import {HmsConnectorService} from './hms-connector.service';
-
+```
 
  Add @inject to inject parameters in constructor
+ ```
 @service(HmsConnectorService)
     public hmsConnectorService: HmsConnectorService,
+```
 
 
 Add function sql query use this.hmsConnectorService.query<Array<object>>(sql);
 
 Add getPatient
+ ```
   async getPatientByHn(hn: string): Promise<Array<object>> {
-    const sql = `SELECT * FROM patient WHERE hn=${hn}`;
-
+    const sql =SELECT * FROM patient WHERE hn=${hn}`;
     return this.hmsConnectorService.query<Array<object>>(sql);
   }
+ ```
+ 
 
  ### Lb4 controller
 lb4 controller
 Controller class name: Hms
 Empty Controller
 
+ ```
 import {HmsService} from '../services/hms-service.service';
-
+```
  Add constructor
+ ```
 @service(HmsService) public hmsService: HmsService,
-
+```
 Add function get
 @get('/patient/{hn}')
   async getPatient(
@@ -93,23 +106,24 @@ database: sakon
 Feature supported by MongoDB v3.1.0 and above: (Y/n) Y (db.version())
 
 ***authSource: 'admin',
-------Model-------
+ 
+### Model
 Lb4 model
 Entity model
 
-------Repository------
+### Repository
 lb4 repository
 Select the datasource MongoDatasource
 Select model
 
--------Controller-----
+### Controller
 Lb4 controller
 CRUD 
 
 
 
 
-------ENV-------
+### ENV
 Create file .env in root path
 environment=development
 
