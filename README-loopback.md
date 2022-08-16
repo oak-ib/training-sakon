@@ -69,7 +69,8 @@ Add function sql query use this.hmsConnectorService.query<Array<object>>(sql);
 Add getPatient
  ```
   async getPatientByHn(hn: string): Promise<Array<object>> {
-    const sql =SELECT * FROM patient WHERE hn=${hn}`;
+    const sql = `SELECT * FROM patient WHERE hn=${hn}`;
+
     return this.hmsConnectorService.query<Array<object>>(sql);
   }
  ```
