@@ -32,3 +32,10 @@ MAX, MIN
 UNION
 SUB QUERY
 ```
+
+```
+SELECT vs.*,diag.*
+FROM Visitopd AS vs
+LEFT JOIN ptdiag10 AS diag ON(vs.Vsid=diag.ptVsid)
+WHERE vs.VSDate 
+```
