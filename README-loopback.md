@@ -140,5 +140,7 @@ process.env.environment === "development" ? "127.0.0.1" : "192.168.42.180"
  # Start Wacth
  ```
  npm install --save-dev tsc-watch
+ 
+ "start:watch": "tsc-watch --target es2017 --outDir ./dist --onSuccess \"node .\""
  ```
 
