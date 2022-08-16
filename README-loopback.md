@@ -88,6 +88,7 @@ import {HmsService} from '../services/hms-service.service';
 @service(HmsService) public hmsService: HmsService,
 ```
 Add function get
+ ```
 @get('/patient/{hn}')
   async getPatient(
     @param.path.string('hn') hn: string,
@@ -95,7 +96,7 @@ Add function get
     const data = await this.hmsService.getPatient(hn);
     return data;
   }
-
+```
 ### DataSource mongodb
 lb4 datasource 
 Name : mongo
