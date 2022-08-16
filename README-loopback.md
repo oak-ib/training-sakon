@@ -5,6 +5,7 @@ lb4 app
 
 ### DataSource ms sql
 
+```
 lb4 datasource 
 Name : hms
 Connector : Microsoft SQL
@@ -14,7 +15,7 @@ port: 1433
 user: user ที่ใช้เข้า database
 password: pass ที่ใช้เข้า database
 database: HMSDB
-
+````
 ### HIS Service connecttor
 lb4 service
 Service type: Local service class bound to application context
