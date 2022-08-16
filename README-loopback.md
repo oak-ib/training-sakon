@@ -136,4 +136,9 @@ import * as dotenv from 'dotenv';
 dotenv.config();
 
 process.env.environment === "development" ? "127.0.0.1" : "192.168.42.180"
+ 
+ # Start Wacth
+ ```
+ npm install --save-dev tsc-watch
+ ```
 
