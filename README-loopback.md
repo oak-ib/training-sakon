@@ -18,9 +18,11 @@ password: pass ที่ใช้เข้า database
 database: HMSDB
 ````
 ### HIS Service connecttor
+```
 lb4 service
 Service type: Local service class bound to application context
 Service name: HmsConnector
+```
 
 Edit file
 ```
