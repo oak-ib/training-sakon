@@ -3,3 +3,4 @@
 Patient info
 
 <img src="https://github.com/zokemoke/training-sakon/blob/main/ht.png" width="128"/>
+![Patient Info](ptInfo.png)
